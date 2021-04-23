@@ -23,7 +23,7 @@ body, html {
 }
 </style>
 </head>
-<body>
+<body onLoad="timeRefresh(8000);">
 
 <div class="bg" id="img"></div>
 
@@ -39,4 +39,9 @@ body, html {
   var bgstyle = document.getElementById("img");
   bgstyle.style.backgroundImage = "url(" + urljpg + ")";
   
+  function timeRefresh(time) {
+      setTimeout("location.reload(true);", time);
+      }
+  
+
   </script>
